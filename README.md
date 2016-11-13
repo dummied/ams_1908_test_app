@@ -1,24 +1,15 @@
-# README
+# Demonstration app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This small API-mode Rails 5 app is intended to demostrate issue
+[#1908](https://github.com/rails-api/active_model_serializers/issues/1908)
+for `active_model_serializers`.
 
-Things you may want to cover:
+In short, attributes serialized as a Hash on the model end results in an
+empty Hash when output by AMS.
 
-* Ruby version
+A short-term workaround for this is to serlialize your attribute as JSON
+instead (also tested).
 
-* System dependencies
+`rails test` or `rake test` to run the tests.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The test code itself is `test/integration/ams_1908_test.rb`
